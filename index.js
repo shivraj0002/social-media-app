@@ -4,6 +4,11 @@ const express = require('express');
 const app = express();
 // select the port to connect to
 const port = 8000;
+// setting up the view engine
+app.set('view engine', 'ejs');
+app.set('views', './views')
+
+
 // import routes from routes/index.js
 const router = require('./routes');
 // use express router 
