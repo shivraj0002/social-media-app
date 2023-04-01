@@ -4,9 +4,10 @@ const express = require('express');
 const app = express();
 // select the port to connect to
 const port = 8000;
-
-
-
+// import routes from routes/index.js
+const router = require('./routes');
+// use express router 
+app.use('/', router)
 
 // now listen on port by .listen() method
 app.listen(port, function (err) {
